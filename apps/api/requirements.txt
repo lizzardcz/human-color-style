@@ -1,0 +1,11 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pillow>=11.1.0
+httpx==0.28.1
+pydantic-settings==2.7.1
+# Required for production FaceMesh extraction on Python 3.12.
+# 0.10.21 still exposes mp.solutions.face_mesh; newer 0.10.35 uses the Tasks API only.
+mediapipe==0.10.21; python_version >= "3.12" and python_version < "3.13"
+opencv-python==4.11.0.86; python_version >= "3.12" and python_version < "3.13"
+playwright>=1.49.1
