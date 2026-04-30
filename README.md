@@ -58,6 +58,50 @@ npm run dev:web
 
 Open `http://localhost:3000/analyze`.
 
+## Background dev startup
+
+On Windows, the simplest way is to double-click:
+
+- `start.cmd` — start backend and frontend in the background.
+- `status.cmd` — check whether both services are running.
+- `stop.cmd` — stop both services.
+
+After startup, open `http://localhost:3000/analyze`.
+
+The same commands can also be run from PowerShell:
+
+```powershell
+.\start.cmd
+.\status.cmd
+.\stop.cmd
+```
+
+If you do not want the CMD window to pause, pass `--no-pause`:
+
+```powershell
+.\start.cmd --no-pause
+```
+
+Start both the FastAPI backend and Next.js frontend in the background:
+
+```powershell
+npm run dev:bg
+```
+
+Check status:
+
+```powershell
+npm run status:bg
+```
+
+Stop both background processes:
+
+```powershell
+npm run stop:bg
+```
+
+Runtime PID files and logs are written under `.run/`, which is ignored by Git.
+
 ## Validation
 
 ```powershell

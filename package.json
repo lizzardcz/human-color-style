@@ -10,6 +10,10 @@
     "dev:web": "npm --prefix apps/web run dev",
     "build:web": "npm --prefix apps/web run build",
     "lint:web": "npm --prefix apps/web run lint",
-    "dev:api": "python -m uvicorn apps.api.main:app --reload --host 0.0.0.0 --port 8000"
+    "dev:api": "python -m uvicorn apps.api.main:app --reload --host 0.0.0.0 --port 8000",
+    "dev:bg": "powershell -ExecutionPolicy Bypass -File scripts/dev-background.ps1 start",
+    "stop:bg": "powershell -ExecutionPolicy Bypass -File scripts/dev-background.ps1 stop",
+    "restart:bg": "powershell -ExecutionPolicy Bypass -File scripts/dev-background.ps1 restart",
+    "status:bg": "powershell -ExecutionPolicy Bypass -File scripts/dev-background.ps1 status"
   }
 }
